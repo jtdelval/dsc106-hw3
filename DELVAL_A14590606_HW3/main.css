@@ -1,0 +1,39 @@
+body {
+    background-color: #ECE9E6
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 1rem;
+}
+.lines{
+    grid-row: span 2;
+}
+
+.chart {
+    min-width: 320px;
+    max-width: 800px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.color-box {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #ccc;
+}
+
+.header img {
+    float: left;
+    width: 50px;
+    height: 50px
+}
+
+.header h1 {
+    position: relative;
+    font-size: 24px;
+    top: 18px;
+    left: 10px;
+}

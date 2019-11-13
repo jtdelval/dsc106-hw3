@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='main.css'>
+    <title>Energy   Springfield</title>
+</head>
+<body>
+    <div class='header'>
+        <img src="assets/homer.png" alt='logo' />
+        <h1>Energy  Springfield</h1>
+    </div>
+    <br>
+    <div class='wrapper'>
+        <div class='lines' onmouseout="imaginationBreaker(this)"><div id="container"></div></div>
+        <div class='legend'><table rules='rows'>
+            <tr>
+                <th></th>
+                <th align="left">Power (MW)</th>
+                <th align="left">Contribution (to demand)</th>
+                <th align="left">Av.Value ($/MWh)</th>
+            </tr>
+            <tr>
+                <th align="left">Source</th>
+                <th id='source_power' align="left">1,179</th>
+                <th align="left"></th>
+                <th id='source_value' align="left">$58.62</th>
+            </tr>
+            <tr>
+                <td><div class='color-box' style="background-color: #437607;"></div> Wind</td>
+                <td id='wind_power'>81</td>
+                <td id='wind_contribution'>7.0%</td>
+                <td id='wind_value'>$56.43</td>
+            </tr>
+            <tr>
+                <td><div class='color-box' style="background-color: #4582B4;"></div> Hydro</td>
+                <td id='hydro_power'>60</td>
+                <td id='hydro_contribution'>5.1%</td>
+                <td id='hydro_value'>$63.96</td>
+            </tr>
+            <tr>
+                <td><div class='color-box' style="background-color: #FDB462;"></div> Gas (CCGT)</td>
+                <td id='gas_power'>65</td>
+                <td id='gas_contribution'>5.6%</td>
+                <td id='gas_value'>$60.22</td>
+            </tr>
+            <tr>
+                <td><div class='color-box' style='background-color: #F35020;'></div> Distillate</td>
+                <td id='distillate_power'>0.02</td>
+                <td id='distillate_contribution'>0.002%</td>
+                <td id='distillate_value'>$57.42</td>
+            </tr>
+            <tr>
+                <td><div class='color-box' style='background-color: #121212;'></div> Black Coal</td>
+                <td id='coal_power'>891</td>
+                <td id='coal_contribution'>76.5%</td>
+                <td id='coal_value'>$59.01</td>
+            </tr>
+            <tr>
+                <th align="left">Loads</th>
+                <th id='loads_power' align="left">-15</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><div class='color-box' style='background-color: #977AB1;'></div> Exports</td>
+                <td id='exports_power'>-2</td>
+                <td id='exports_contribution'>-0.2%</td>
+                <td id='exports_value'>$65.36</td>
+            </tr>
+            <tr>
+                <td><div class='color-box' style='background-color: #88AFD0;'></div> Pumps</td>
+                <td id='pumps_power'>-12</td>
+                <td id='pumps_contribution'>-1.0%</td>
+                <td id='pumps_value'>$46.49</td>
+            </tr>
+            <tr>
+                <th align="left">Net</th>
+                <th id ="net_power" align="left">1,165</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th align='left'>Renewables</th>
+                <th></th>
+                <th id='renewable_contribution' align="left">19.2%</th>
+                <th></th>
+            </tr>
+        </table></div>
+        <div class='pie'>
+            <button onclick="switchChart()">Switch Display</button>
+            <div id='barh_container' style="display:none;"></div>
+            <div id='pie_container' style="display:block;"></div>
+        </div>
+    </div>
+    <script src="assets/highcharts.js"></script>
+    <script src="assets/data.js"></script>
+    <script src="assets/exporting.js"></script>
+    <script src="assets/export-data.js"></script>
+    
+    <script src="main.js"></script>
+    
+</body>
+</html>
